@@ -12,6 +12,7 @@ object Versions {
     const val jUnitExtAndroid = "1.1.1"
     const val mockito = "3.3.3"
     const val coroutinesTesting = "1.3.7"
+    const val ktLint = "0.33.0"
 }
 
 object Dependencies {
@@ -24,6 +25,7 @@ object Dependencies {
     const val constraintLayoutLibrary = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val appCompatLibrary = "androidx.appcompat:appcompat:${Versions.appCompat}"
     const val recyclerViewLibrary = "com.android.support:recyclerview-v7:${Versions.recyclerView}"
+    const val ktLintLibrary = "com.pinterest:ktlint:${Versions.ktLint}"
 
     const val androidViewModelLibrary = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifeCycle}"
     const val liveDataLibrary = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifeCycle}"
