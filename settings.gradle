@@ -1,2 +1,6 @@
+include ':presentation'
+include ':remotedata'
+include ':domain'
+include ':data'
 include ':app'
 rootProject.name = "Mercado libre prueba"

@@ -1,19 +1,19 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdkVersion 30
+    buildToolsVersion "30.0.0"
 
     defaultConfig {
-        applicationId "com.example.mercadolibreprueba"
         minSdkVersion 25
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -29,6 +29,14 @@ dependencies {
     implementation Dependencies.kotlinStandardLibrary
     implementation Dependencies.coreKtxLibrary
     implementation Dependencies.appCompatLibrary
+    implementation Dependencies.retrofitLibrary
+    implementation Dependencies.retrofitGsonConverter
+    implementation Dependencies.gsonLibrary
+
+
     testImplementation TestDependencies.jUnitLibrary
+    testImplementation TestDependencies.mockitoLibrary
     androidTestImplementation TestDependencies.jUnitExtAndroidLibrary
+
+    implementation project(path: ':data')
 }
