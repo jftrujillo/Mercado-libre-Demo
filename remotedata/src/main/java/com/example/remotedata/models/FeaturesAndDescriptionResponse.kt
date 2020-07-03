@@ -10,8 +10,8 @@ data class FeaturesAndDescriptionResponse(
 ) {
 
     data class Features(
-        val type: String,
-        val text: String
+        val type: String?,
+        val text: String?
     )
 
     data class ShortDescription(

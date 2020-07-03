@@ -4,6 +4,7 @@ import com.example.remotedata.models.FeaturesAndDescriptionResponse
 import com.example.remotedata.models.ProductsQueryResponse
 import com.example.remotedata.models.SpecificProductResponse
 import com.example.remotedata.util.Url
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

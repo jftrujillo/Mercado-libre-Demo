@@ -15,6 +15,11 @@ data class ProductsQueryResponse(
         @SerializedName("currency_id")
         val currencyId: String,
         val condition: String,
-        val thumbnail: String
-    )
+        val thumbnail: String,
+        val shipping: Shipping
+    ) {
+        data class Shipping(
+            val freeShipping: Boolean
+        )
+    }
 }
