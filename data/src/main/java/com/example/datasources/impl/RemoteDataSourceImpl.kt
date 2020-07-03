@@ -15,8 +15,8 @@ class RemoteDataSourceImpl @Inject constructor(
     private val productsApi: ProductsApi
 ) : RemoteDataSource {
 
-    override suspend fun getProducts(productName: String): List<ProductPreview> {
-        val response = productsApi.getProductsByQuery(query = productName)
+    override suspend fun getProducts(query: String): List<ProductPreview> {
+        val response = productsApi.getProductsByQuery(query = query)
         return response.results.map { productPreview ->
             productPreviewMapper.invoke(productPreview)
         }
