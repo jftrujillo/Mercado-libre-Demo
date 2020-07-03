@@ -2,6 +2,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply from: '../ktlint.gradle'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
 
 android {
     compileSdkVersion 30
@@ -37,5 +39,9 @@ dependencies {
     testImplementation TestDependencies.mockitoLibrary
     androidTestImplementation TestDependencies.jUnitExtAndroidLibrary
 
+    implementation Dependencies.hiltLibrary
+    kapt AnnotationProcessor.hiltAnnotationProcessor
+
     implementation project(path: ':domain')
+    implementation project(path: ':remotedata')
 }

@@ -9,7 +9,6 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface ProductsApi {
-
     @GET(Url.SEARCH_PATH)
     suspend fun getProductsByQuery(
         @Path("siteId") site: String = Url.DEFAULT_SITE,
@@ -25,5 +24,4 @@ interface ProductsApi {
     suspend fun getFeaturesAndDescriptions (
         @Path("catalogProductId") catalogProductId: String
     ) : FeaturesAndDescriptionResponse
-
 }

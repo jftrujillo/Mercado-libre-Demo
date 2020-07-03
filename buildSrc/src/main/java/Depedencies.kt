@@ -13,6 +13,7 @@ object Versions {
     const val mockito = "3.3.3"
     const val coroutinesTesting = "1.3.7"
     const val ktLint = "0.33.0"
+    const val hilt = "2.28-alpha"
 }
 
 object Dependencies {
@@ -29,10 +30,13 @@ object Dependencies {
 
     const val androidViewModelLibrary = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifeCycle}"
     const val liveDataLibrary = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifeCycle}"
+
+    const val hiltLibrary = "com.google.dagger:hilt-android:${Versions.hilt}"
 }
 
 object AnnotationProcessor {
     const val glideAnnotationProcessor = "com.github.bumptech.glide:compiler:${Versions.glide}"
+    const val hiltAnnotationProcessor = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
 }
 
 object TestDependencies {

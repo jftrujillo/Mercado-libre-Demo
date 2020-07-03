@@ -2,6 +2,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply from: '../ktlint.gradle'
+apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
@@ -34,4 +36,7 @@ dependencies {
     implementation Dependencies.appCompatLibrary
     testImplementation TestDependencies.jUnitLibrary
     androidTestImplementation TestDependencies.jUnitExtAndroidLibrary
+
+    implementation Dependencies.hiltLibrary
+    kapt AnnotationProcessor.hiltAnnotationProcessor
 }
