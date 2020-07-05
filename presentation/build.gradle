@@ -19,17 +19,24 @@ android {
         consumerProguardFiles "consumer-rules.pro"
     }
 
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    kotlinOptions { jvmTarget = "1.8" }
 }
 
 preBuild.dependsOn ktlint
 
 dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation Dependencies.kotlinStandardLibrary
     implementation Dependencies.coreKtxLibrary
@@ -38,6 +45,8 @@ dependencies {
     implementation Dependencies.recyclerViewLibrary
     implementation Dependencies.androidViewModelLibrary
     implementation Dependencies.constraintLayoutLibrary
+    implementation Dependencies.navigationFragment
+    implementation Dependencies.navigationUi
 
     testImplementation TestDependencies.jUnitLibrary
     testImplementation TestDependencies.mockitoLibrary
@@ -45,6 +54,9 @@ dependencies {
 
     implementation Dependencies.hiltLibrary
     kapt AnnotationProcessor.hiltAnnotationProcessor
+    implementation Dependencies.hiltViewModelLibrary
+    kapt Dependencies.hiltViewModelCompiler
+
 
     implementation project(path: ':domain')
 }

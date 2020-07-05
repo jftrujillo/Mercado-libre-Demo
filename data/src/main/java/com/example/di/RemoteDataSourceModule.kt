@@ -7,18 +7,18 @@ import com.example.repositories.ProductsRepositoryImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ActivityComponent
+import dagger.hilt.android.components.ActivityRetainedComponent
 
 @Module
-@InstallIn(ActivityComponent::class)
+@InstallIn(ActivityRetainedComponent::class)
 abstract class RemoteDataSourceModule {
     @Binds
-    abstract fun bindsRemoteDataSource(
+    abstract fun bindRemoteDataSource(
         remoteDataSourceImpl: RemoteDataSourceImpl
-    ) : RemoteDataSource
+    ): RemoteDataSource
 
     @Binds
-    abstract fun bindsProductRepository(
+    abstract fun bindProductRepository(
         productsRepositoryImpl: ProductsRepositoryImpl
-    ) : ProductsRepository
+    ): ProductsRepository
 }

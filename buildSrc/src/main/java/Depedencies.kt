@@ -14,6 +14,8 @@ object Versions {
     const val coroutinesTesting = "1.3.7"
     const val ktLint = "0.33.0"
     const val hilt = "2.28-alpha"
+    const val hiltViewModel = "1.0.0-alpha01"
+    const val navigationComponent = "2.3.0-beta01"
 }
 
 object Dependencies {
@@ -27,11 +29,16 @@ object Dependencies {
     const val appCompatLibrary = "androidx.appcompat:appcompat:${Versions.appCompat}"
     const val recyclerViewLibrary = "com.android.support:recyclerview-v7:${Versions.recyclerView}"
     const val ktLintLibrary = "com.pinterest:ktlint:${Versions.ktLint}"
+    const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigationComponent}"
+    const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigationComponent}"
+
 
     const val androidViewModelLibrary = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifeCycle}"
     const val liveDataLibrary = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifeCycle}"
 
     const val hiltLibrary = "com.google.dagger:hilt-android:${Versions.hilt}"
+    const val hiltViewModelLibrary = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hiltViewModel}"
+    const val hiltViewModelCompiler = "androidx.hilt:hilt-compiler:${Versions.hiltViewModel}"
 }
 
 object AnnotationProcessor {

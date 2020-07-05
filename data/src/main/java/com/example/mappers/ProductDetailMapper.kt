@@ -18,7 +18,12 @@ class ProductDetailMapper @Inject constructor() {
             availableQuantity = specificProductResponse.availableQuantity,
             soldQuantity = specificProductResponse.soldQuantity,
             description = featuresAndDescriptionResponse?.shortDescription?.content,
-            features = featuresAndDescriptionResponse?.features?.map { ProductDetail.Feature(it.text, it.type)},
+            features = featuresAndDescriptionResponse?.features?.map {
+                ProductDetail.Feature(
+                    it.text,
+                    it.type
+                )
+            },
             tags = specificProductResponse.tags
         )
     }
