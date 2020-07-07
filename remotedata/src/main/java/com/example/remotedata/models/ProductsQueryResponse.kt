@@ -19,6 +19,7 @@ data class ProductsQueryResponse(
         val shipping: Shipping
     ) {
         data class Shipping(
+            @SerializedName("free_shipping")
             val freeShipping: Boolean
         )
     }

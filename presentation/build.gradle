@@ -24,6 +24,10 @@ android {
         targetCompatibility 1.8
     }
 
+    dataBinding {
+        enabled = true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -47,6 +51,8 @@ dependencies {
     implementation Dependencies.constraintLayoutLibrary
     implementation Dependencies.navigationFragment
     implementation Dependencies.navigationUi
+    implementation Dependencies.glideLibrary
+    annotationProcessor AnnotationProcessor.glideAnnotationProcessor
 
     testImplementation TestDependencies.jUnitLibrary
     testImplementation TestDependencies.mockitoLibrary

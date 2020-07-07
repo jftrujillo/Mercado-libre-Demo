@@ -23,7 +23,7 @@ object Dependencies {
     const val retrofitLibrary = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val retrofitGsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
     const val gsonLibrary = "com.google.code.gson:gson:${Versions.gson}"
-    const val glideLibrary = "com.github.bumptech.glide:${Versions.glide}"
+    const val glideLibrary = "com.github.bumptech.glide:glide:${Versions.glide}"
     const val coreKtxLibrary = "androidx.core:core-ktx:${Versions.coreKtx}"
     const val constraintLayoutLibrary = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val appCompatLibrary = "androidx.appcompat:appcompat:${Versions.appCompat}"
