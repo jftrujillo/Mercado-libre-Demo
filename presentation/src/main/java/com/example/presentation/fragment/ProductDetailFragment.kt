@@ -1,19 +1,23 @@
 package com.example.presentation.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.presentation.R
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.navArgs
+import com.example.presentation.databinding.FragmentProductDetailBinding
+import com.example.presentation.viewmodel.MasterDetailViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class ProductDetailFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    private val args: ProductDetailFragmentArgs by navArgs()
+    private val viewModel: MasterDetailViewModel by activityViewModels()
+
+    private lateinit var binding: FragmentProductDetailBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -21,6 +25,7 @@ class ProductDetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_product_detail, container, false)
+        binding = FragmentProductDetailBinding.inflate(inflater, container, false)
+        return binding.root
     }
 }

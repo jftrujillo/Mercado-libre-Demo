@@ -5,4 +5,7 @@
     <string name="free_shipping">Envio gratis</string>
     <string name="search_tag">Buscar</string>
     <string name="app_name">Mercado libre</string>
+    <string name="wait_label">Espera un momento</string>
+    <string name="search_products">Busca tus productos favoritos</string>
+    <string name="no_results_label">Lo sentimos! No encontramos resultados en tu busqueda</string>
 </resources>

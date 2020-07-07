@@ -21,7 +21,7 @@ object UseCasesModule {
 
     @Provides
     @ActivityRetainedScoped
-    fun provideGEtProductDetailUseCase(productsRepository: ProductsRepository): GetProductDetailUseCase {
+    fun provideGetProductDetailUseCase(productsRepository: ProductsRepository): GetProductDetailUseCase {
         return GetProductDetailUseCase(productsRepository)
     }
 }

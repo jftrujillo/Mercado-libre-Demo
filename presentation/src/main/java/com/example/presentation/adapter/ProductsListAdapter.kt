@@ -10,7 +10,9 @@ import com.bumptech.glide.Glide
 import com.example.domain.model.ProductPreview
 import com.example.presentation.databinding.ProductPreviewTemplateBinding
 
-class ProductsListAdapter :
+class ProductsListAdapter(
+    private val listener: (ProductPreview) -> Unit
+) :
     ListAdapter<ProductPreview, RecyclerView.ViewHolder>(ProductPreviewDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -26,6 +28,7 @@ class ProductsListAdapter :
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val productPreview = getItem(position)
         (holder as ProductPreviewViewHolder).bind(productPreview)
+        holder.itemView.setOnClickListener { listener(productPreview) }
     }
 
     class ProductPreviewViewHolder(
