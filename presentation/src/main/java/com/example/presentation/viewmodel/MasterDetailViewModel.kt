@@ -21,8 +21,8 @@ class MasterDetailViewModel @ViewModelInject constructor(
 
     private val productLiveData = MutableLiveData<Result<List<ProductPreview>>>()
     private val detailProductLiveData = MutableLiveData<Result<ProductDetail>>()
-    fun getProducts(): LiveData<Result<List<ProductPreview>>> = productLiveData
-    fun getDetailedProduct(): LiveData<Result<ProductDetail>> = detailProductLiveData
+    fun getProductsListener(): LiveData<Result<List<ProductPreview>>> = productLiveData
+    fun getDetailedProductListener(): LiveData<Result<ProductDetail>> = detailProductLiveData
 
     fun searchBy(query: String) {
         viewModelScope.launch {

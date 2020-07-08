@@ -6,6 +6,7 @@ data class FeaturesAndDescriptionResponse(
     val id: String,
     @SerializedName("short_description")
     val shortDescription: ShortDescription,
+    @SerializedName("main_features")
     val features: List<Features>
 ) {
 

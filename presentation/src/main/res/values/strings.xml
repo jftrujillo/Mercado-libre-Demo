@@ -8,4 +8,12 @@
     <string name="wait_label">Espera un momento</string>
     <string name="search_products">Busca tus productos favoritos</string>
     <string name="no_results_label">Lo sentimos! No encontramos resultados en tu busqueda</string>
+    <string name="sold_quantity_label">Vendidos - %1$s</string>
+    <string name="price_label">$ %1$s</string>
+    <string name="warranty_label">&lt;big>&lt;b>Garantia&lt;/big>&lt;/b> &lt;br>&lt;br>%1$s</string>
+    <string name="tags_label">&lt;big>&lt;b>Tags&lt;/big>&lt;/b> &lt;br>&lt;br>%1$s</string>
+    <string name="description_label">&lt;big>&lt;b>Descripcion&lt;/b>&lt;/big> &lt;br>&lt;br>%1$s</string>
+    <string name="features_label">&lt;big>&lt;b>Caracteristicas&lt;/b>&lt;/big> &lt;br>&lt;br>%1$s</string>
+    <string name="network_error_message">No tienes acceso a internet. Conectate a internet e intentalo nuevamente</string>
+    <string name="unknow_error_message">Hemos encontrado un error inesperado, intentalo nuevamente mas tarde</string>
 </resources>

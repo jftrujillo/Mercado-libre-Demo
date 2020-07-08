@@ -11,11 +11,14 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.example.domain.model.ProductPreview
+import com.example.domain.util.ErrorType
 import com.example.domain.util.Result
 import com.example.presentation.adapter.ProductsListAdapter
 import com.example.presentation.databinding.FragmentProductListBinding
+import com.example.presentation.util.getErrorMessage
 import com.example.presentation.viewmodel.MasterDetailViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.error_layout.view.*
 
 @AndroidEntryPoint
 class ProductListFragment : Fragment() {
@@ -48,7 +51,7 @@ class ProductListFragment : Fragment() {
     }
 
     private fun listenProductList() {
-        viewModel.getProducts().observe(viewLifecycleOwner, Observer { result ->
+        viewModel.getProductsListener().observe(viewLifecycleOwner, Observer { result ->
             when (result) {
                 is Result.Loading -> setLoadingView()
                 is Result.Success -> {
@@ -59,7 +62,7 @@ class ProductListFragment : Fragment() {
                         setNoProductListView()
                     }
                 }
-                is Result.Error -> setErrorView()
+                is Result.Error -> setErrorView(result.exception)
             }
         })
     }
@@ -88,11 +91,12 @@ class ProductListFragment : Fragment() {
         binding.noResultContainer.visibility = View.GONE
     }
 
-    private fun setErrorView() {
+    private fun setErrorView(exception: ErrorType) {
         binding.noPreviewContainer.visibility = View.GONE
         binding.progressContainer.visibility = View.GONE
         binding.list.visibility = View.GONE
         binding.errorView.visibility = View.VISIBLE
         binding.noResultContainer.visibility = View.GONE
+        binding.errorView.error_label.text = context?.let { exception.getErrorMessage(it) }
     }
 }
