@@ -30,6 +30,10 @@ android {
         sourceCompatibility 1.8
         targetCompatibility 1.8
     }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
 }
 
 preBuild.dependsOn ktlint
@@ -43,6 +47,7 @@ dependencies {
     testImplementation TestDependencies.jUnitLibrary
     testImplementation TestDependencies.mockitoLibrary
     androidTestImplementation TestDependencies.jUnitExtAndroidLibrary
+    testImplementation TestDependencies.coroutinesLibrary
 
     implementation Dependencies.hiltLibrary
     kapt AnnotationProcessor.hiltAnnotationProcessor

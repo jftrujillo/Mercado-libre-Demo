@@ -10,6 +10,7 @@ dependencies {
 
     testImplementation TestDependencies.jUnitLibrary
     testImplementation TestDependencies.mockitoLibrary
+    testImplementation TestDependencies.coroutinesLibrary
 }
 
 sourceCompatibility = "1.7"
