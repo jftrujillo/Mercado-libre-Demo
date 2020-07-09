@@ -4,7 +4,7 @@ lista de productos y la posiblidad de ver un detalle de cada uno de ellos.
 
 A continuacion se muestra como funciona la app. 
 
-![Demo](images/mercado libre demo.gif)
+![Demo](images/demo.gif)
 
 
 ## Stack Tecnologico
