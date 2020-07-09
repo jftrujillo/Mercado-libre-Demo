@@ -81,7 +81,7 @@ Para su comunicacion, hacemos uso del stack mas conocido en android y remendado 
 
 El sistema propuesto se describe mediante el siguiente diagrama. 
 
-![Alt](images/Untitled Diagram.drawio)
+![Alt](images/demo_diagram.svg)
 
 
 
