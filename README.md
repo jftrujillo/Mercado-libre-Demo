@@ -4,6 +4,8 @@ lista de productos y la posiblidad de ver un detalle de cada uno de ellos.
 
 A continuacion se muestra como funciona la app. 
 
+![Alt](images/mercado libre demo.gif)
+
 
 ## Stack Tecnologico
  
@@ -23,13 +25,15 @@ RemoteData: Agrupa la logica e informacion relacionada con el accesso al servido
 
 La visiblidad entre modulos se describe a continuacion:
 
-put image here
+![Alt](images/clean.jpg)
 
 Algunos autores consideran que la capa de dominio no es necesaria. Para esta implemetacion, hacemos uso de el para separar por comppleto
 la vista de sus fuentes de datos, permitiendo un acercamiento mas sencillo pensado a futuro, cuando las fuentes de informacion lleguen a ser mas variadas (Acercamiento con bases de datos locales, o rebundancia de servidores remotos)
 
 
 Para mas informacion, recomendamos el siguiente material. 
+
+* [Clean architecture android](https://medium.com/android-dev-hacks/detailed-guide-on-android-clean-architecture-9eab262a9011)
 
 # Comunicacion entre capas: Acercamiento mediante Corutinas
 
@@ -82,6 +86,8 @@ Para su comunicacion, hacemos uso del stack mas conocido en android y remendado 
 El sistema propuesto se describe mediante el siguiente diagrama. 
 
 ![Alt](images/demo_diagram.svg)
+
+para ver el diagrama de mejor manera, ve al folder images y busca el xml. Este archivo se puede abri mediante la plataforma Draw.io y navergar a voluntad
 
 
 
