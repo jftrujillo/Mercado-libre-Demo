@@ -25,7 +25,7 @@ RemoteData: Agrupa la logica e informacion relacionada con el accesso al servido
 
 La visiblidad entre modulos se describe a continuacion:
 
-![Alt](images/clean.jpg)
+![Demo](images/clean.jpg)
 
 Algunos autores consideran que la capa de dominio no es necesaria. Para esta implemetacion, hacemos uso de el para separar por comppleto
 la vista de sus fuentes de datos, permitiendo un acercamiento mas sencillo pensado a futuro, cuando las fuentes de informacion lleguen a ser mas variadas (Acercamiento con bases de datos locales, o rebundancia de servidores remotos)
